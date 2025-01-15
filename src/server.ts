@@ -1,7 +1,7 @@
 import express from 'express';
 import { env } from 'process';
 import "./database/connection";
-import routes from './routes';
+import clientRouter from './routes/clientRoutes';
 
 const app = express();
 
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.use(routes);
+app.use('/api/clients', clientRouter);
 
 app.listen(env.PORT, () => {
   console.log('API rodando na porta ' + env.PORT)
