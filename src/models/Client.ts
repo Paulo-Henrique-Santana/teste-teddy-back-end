@@ -22,4 +22,11 @@ export class Client extends Model {
     allowNull: false
   })
   companyValue!: number;
+
+  @Column({
+    type: DataType.BOOLEAN,
+    allowNull: false,
+    defaultValue: false
+  })
+  selected!: boolean;
 }
