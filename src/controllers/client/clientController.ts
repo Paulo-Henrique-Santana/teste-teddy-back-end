@@ -1,11 +1,13 @@
 import { createClient } from "./createClient";
 import { deleteClient } from "./deleteClient";
-import { getAllClients } from "./getAllClients";
+import { getClients } from "./getClients";
+import { unselectClients } from "./unselectClients";
 import { updateClient } from "./updateClient";
 
 export const clientController = {
-  getAllClients,
+  getClients,
   createClient,
   deleteClient,
-  updateClient
+  updateClient,
+  unselectClients
 }
