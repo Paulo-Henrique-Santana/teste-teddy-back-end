@@ -22,7 +22,8 @@ export const getClients = async (req: Request, res: Response) => {
     const { rows, count } = await Client.findAndCountAll({
       limit: pageSize,
       offset: (page - 1) * pageSize,
-      where
+      where,
+      order: [["id", "DESC"]]
     });
 
     return res.json({
